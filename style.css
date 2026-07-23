@@ -1,0 +1,182 @@
+/* ========================================================================== */
+/*  1. Zmienne kolorystyczne i ustawienia bazowe całej strony                */
+/* ========================================================================== */
+:root {
+  --black: #080909;
+  --charcoal: #101211;
+  --ink: #171918;
+  --line: rgba(245, 244, 239, 0.17);
+  --muted: #b8bbb5;
+  --white: #f6f6f1;
+  --white-gradient: linear-gradient(105deg, #ffffff 5%, #d8d9d5 50%, #ffffff 100%);
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: "Manrope", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+body { margin: 0; overflow-x: hidden; background: var(--black); color: var(--white); font-family: var(--sans); font-size: 16px; line-height: 1.65; }
+a { color: inherit; text-decoration: none; }
+button { color: inherit; font: inherit; }
+
+/* Wspólne formatowanie nagłówków z gradientem od bieli do szarości. */
+h1, h2, h3 { margin: 0; font-family: var(--serif); font-weight: 500; line-height: .94; letter-spacing: -.025em; }
+h1, h2, h3, .brand-title span { background: var(--white-gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
+h1 { font-size: clamp(3.7rem, 8.2vw, 8rem); }
+h2 { font-size: clamp(3rem, 5.7vw, 5.5rem); }
+h3 { font-size: clamp(2.7rem, 4vw, 4.4rem); }
+h1 em, h2 em, h3 em { font-weight: 400; }
+p { margin: 0; }
+
+/* ========================================================================== */
+/*  2. Stała górna belka i rozwijana nawigacja                                */
+/* ========================================================================== */
+.site-header { position: fixed; z-index: 20; top: 0; left: 0; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; width: 100%; min-height: 84px; padding: 10px clamp(1.25rem, 4vw, 4.7rem); border-bottom: 1px solid transparent; background: linear-gradient(180deg, rgba(7, 8, 8, .94), rgba(7, 8, 8, .42)); transition: min-height .35s ease, background .35s ease, border-color .35s ease, backdrop-filter .35s ease; }
+.site-header.is-scrolled { min-height: 68px; border-color: var(--line); background: rgba(8, 9, 9, .9); backdrop-filter: blur(16px); }
+.brand-mark { display: block; width: 64px; height: 64px; overflow: hidden; border-radius: 50%; }
+.brand-mark img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.brand-title { justify-self: center; display: grid; text-align: center; text-transform: uppercase; line-height: 1; }
+.brand-title span { font-family: var(--serif); font-size: clamp(1.25rem, 1.8vw, 1.65rem); font-weight: 600; letter-spacing: .12em; }
+.brand-title small { margin-top: 4px; color: var(--muted); font-size: .59rem; font-weight: 700; letter-spacing: .32em; }
+.main-nav { justify-self: end; display: flex; align-items: center; gap: 15px; }
+.nav-dropdown { position: relative; }
+.nav-dropdown-toggle { display: inline-flex; gap: 9px; align-items: center; padding: 8px; border: 0; background: transparent; cursor: pointer; color: var(--white); font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.nav-dropdown-toggle span { transition: transform .25s ease; }
+.nav-dropdown-toggle[aria-expanded="true"] span { transform: rotate(45deg); }
+.nav-dropdown-panel { position: absolute; right: 0; top: calc(100% + 10px); display: grid; width: 194px; padding: 8px; border: 1px solid var(--line); background: rgba(19, 21, 20, .98); box-shadow: 0 20px 40px rgba(0, 0, 0, .32); opacity: 0; pointer-events: none; transform: translateY(-7px); transition: .25s ease; }
+.nav-dropdown-panel.is-open { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.nav-dropdown-panel a { padding: 10px 12px; color: var(--muted); font-size: .78rem; transition: color .2s, background .2s; }
+.nav-dropdown-panel a:hover, .nav-dropdown-panel a:focus-visible { background: rgba(255,255,255,.06); color: var(--white); }
+.menu-toggle { display: none; }
+
+/* Wspólny styl przycisków i tekstowych odsyłaczy. */
+.button { display: inline-flex; gap: 20px; align-items: center; justify-content: center; padding: 14px 21px; border: 1px solid rgba(255,255,255,.52); background: linear-gradient(135deg, rgba(255,255,255,.16), rgba(255,255,255,.04)); color: var(--white); font-size: .68rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; transition: transform .25s ease, background .25s ease, border-color .25s ease; }
+.button:hover, .button:focus-visible { transform: translateY(-3px); border-color: var(--white); background: rgba(255,255,255,.16); }
+.button-small { padding: 10px 13px; font-size: .59rem; white-space: nowrap; }
+.text-link { display: inline-block; border-bottom: 1px solid currentColor; color: var(--white); font-size: .75rem; font-weight: 700; letter-spacing: .08em; padding-bottom: 3px; transition: color .2s ease; }
+.text-link:hover { color: #c9ccc7; }
+.text-link-arrow { margin-top: 18px; }
+
+/* ========================================================================== */
+/*  3. Sekcja otwierająca                                                     */
+/* ========================================================================== */
+.hero { position: relative; display: flex; align-items: center; min-height: min(880px, 100vh); padding: 130px clamp(1.25rem, 12vw, 12.5rem) 105px; isolation: isolate; overflow: hidden; }
+.hero::before { position: absolute; z-index: -1; top: 0; left: 0; width: 100%; height: 100%; content: ""; background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(112, 119, 109, .17), transparent 70%), linear-gradient(110deg, #090a0a 16%, rgba(9,10,10,.89) 55%, rgba(9,10,10,.25)); }
+/* Znak Adwokatury Polskiej jest tłem pierwszego ekranu i zachowuje proporcje na małych ekranach. */
+.hero-backdrop { position: absolute; z-index: -2; inset: 0; background: url("photos/4_tło.png") 78% 50% / min(48vw, 590px) no-repeat; filter: grayscale(1) invert(1) contrast(1.3); mix-blend-mode: screen; opacity: .24; transform: scale(1.04); animation: breathing-bg 12s ease-in-out infinite alternate; }
+.hero-content { max-width: 790px; }
+.eyebrow { margin-bottom: 19px; color: var(--muted); font-size: .65rem; font-weight: 700; letter-spacing: .21em; text-transform: uppercase; }
+.hero-copy { max-width: 530px; margin-top: 29px; color: #d2d4cf; font-size: clamp(.93rem, 1.2vw, 1.05rem); }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 25px; margin-top: 35px; }
+.scroll-cue { position: absolute; bottom: 33px; left: clamp(1.25rem, 4vw, 4.7rem); display: flex; gap: 10px; align-items: center; color: var(--muted); font-size: .6rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+.scroll-cue span { width: 24px; height: 1px; background: currentColor; animation: scroll-line 1.6s ease-in-out infinite; }
+@keyframes breathing-bg { to { transform: scale(1.12); } }
+@keyframes scroll-line { 50% { transform: translateX(8px); opacity: .3; } }
+
+/* ========================================================================== */
+/*  4. O mnie oraz karty specjalizacji                                        */
+/* ========================================================================== */
+.section { padding: clamp(5.7rem, 10vw, 10rem) clamp(1.25rem, 8vw, 9rem); }
+.about { display: grid; grid-template-columns: minmax(260px, .78fr) minmax(320px, 1.15fr); gap: clamp(3rem, 10vw, 11rem); align-items: center; background: radial-gradient(ellipse at 11% 85%, rgba(117,126,113,.13), transparent 45%), var(--charcoal); }
+.about-photo { position: relative; max-width: 475px; }
+.about-photo::after { position: absolute; top: 23px; right: -23px; z-index: -1; width: 100%; height: 100%; border: 1px solid var(--line); content: ""; }
+.about-photo img { display: block; width: 100%; aspect-ratio: 1 / 1.12; object-fit: cover; filter: saturate(.72) contrast(1.06); }
+.about-content { max-width: 655px; }
+.about-name { padding-bottom: .13em; font-weight: 700; line-height: 1.04; letter-spacing: -.035em; }
+.about-content p:not(.eyebrow) { margin-top: 24px; color: var(--muted); }
+.services { background: linear-gradient(135deg, #0c0e0d, #121513); }
+.section-intro { display: grid; grid-template-columns: 1fr minmax(200px, 310px); column-gap: 6rem; align-items: end; max-width: 1140px; margin: 0 auto 54px; }
+.section-intro .eyebrow { grid-column: 1 / -1; }
+.section-intro p:not(.eyebrow) { color: var(--muted); }
+/* Wyraziste, niezależne karty: nie są ograniczone wspólnymi ramkami ani numeracją. */
+.service-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2.2vw, 30px); max-width: 1350px; margin: auto; }
+.service-card { position: relative; min-height: 495px; padding: clamp(1.7rem, 3.1vw, 3.35rem); overflow: hidden; border: 1px solid var(--line); background: linear-gradient(150deg, rgba(255,255,255,.08), rgba(255,255,255,.015) 55%); box-shadow: inset 0 1px rgba(255,255,255,.05); transition: border-color .35s ease, background .35s ease, transform .35s ease, box-shadow .35s ease; }
+.service-card::before { position: absolute; inset: 0; border-top: 3px solid rgba(245,245,239,.68); content: ""; opacity: .7; }
+.service-card:hover { border-color: rgba(255,255,255,.6); background: linear-gradient(150deg, rgba(255,255,255,.15), rgba(255,255,255,.03) 62%); box-shadow: 0 18px 45px rgba(0,0,0,.25), inset 0 1px rgba(255,255,255,.18); transform: translateY(-8px); }
+.service-mark { position: absolute; z-index: 0; right: -8px; top: -44px; color: rgba(255,255,255,.055); font-family: var(--serif); font-size: 13rem; line-height: 1; user-select: none; }
+.service-type { position: relative; z-index: 1; display: inline-block; margin: 0; padding: 6px 9px; border: 1px solid rgba(255,255,255,.3); color: #d6d8d2; font-size: .57rem; font-weight: 700; letter-spacing: .13em; line-height: 1.25; text-transform: uppercase; }
+.service-card h3 { position: relative; z-index: 1; margin-top: 50px; font-size: clamp(2.65rem, 3.6vw, 4rem); }
+.service-card ul { position: relative; z-index: 1; display: grid; gap: 9px; margin: 35px 0 0; padding: 0; color: var(--muted); font-size: .8rem; list-style: none; }
+.service-card li { display: flex; align-items: baseline; gap: 9px; }
+.service-card li::before { width: 5px; height: 5px; flex: 0 0 5px; border-radius: 50%; background: #e8e9e3; content: ""; }
+
+/* ========================================================================== */
+/*  5. Dane kontaktowe i mapa                                                  */
+/* ========================================================================== */
+.contact { display: grid; grid-template-columns: minmax(300px, .95fr) minmax(350px, 1fr); gap: clamp(4rem, 11vw, 12rem); background: radial-gradient(ellipse 60% 65% at 85% 50%, rgba(161, 169, 158, .13), transparent 72%), #101210; }
+.contact-heading > p:not(.eyebrow) { max-width: 380px; margin: 25px 0 31px; color: var(--muted); }
+/* Pionowy układ utrzymuje taką samą szerokość i estetykę wszystkich przycisków. */
+.contact-actions { display: grid; gap: 11px; width: min(100%, 310px); }
+.contact-actions .button { justify-content: space-between; width: 100%; }
+.contact-details { margin: 0; border-top: 1px solid var(--line); }
+.contact-item { display: grid; grid-template-columns: 145px 1fr; gap: 18px; padding: 18px 0; border-bottom: 1px solid var(--line); color: var(--muted); font-size: .83rem; font-style: normal; }
+.contact-item > span { color: #f0f0eb; font-size: .65rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.contact-item :is(strong, a) { color: #e4e6df; font-family: var(--sans); font-size: .83rem; font-weight: 500; line-height: 1.55; }
+.contact-item a { transition: color .2s; }
+.contact-item a:hover { color: var(--muted); }
+.contact-name strong { font-family: var(--serif); font-size: 1.2rem; line-height: 1.15; }
+.bank-account strong { font-family: monospace; font-size: .78rem; letter-spacing: .04em; }
+.map-section { background: #0c0d0d; }
+.location-card { display: grid; grid-template-columns: minmax(280px, .78fr) 1.22fr; min-height: 510px; }
+.location-card + .location-card { border-top: 1px solid var(--line); }
+.map-caption { align-self: center; padding: clamp(3.5rem, 7vw, 7.5rem); }
+.map-caption p:not(.eyebrow) { margin-top: 27px; color: var(--muted); }
+.map-frame { width: 100%; min-height: 510px; border: 0; filter: grayscale(1) contrast(1.08) brightness(.75); }
+
+/* ========================================================================== */
+/*  6. Dolna belka oraz animacje ujawniania podczas przewijania               */
+/* ========================================================================== */
+.site-footer { display: flex; justify-content: center; align-items: center; min-height: 78px; padding: 25px clamp(1.25rem, 4vw, 4.7rem); border-top: 1px solid var(--line); background: #070808; color: #8e938b; font-size: .65rem; text-align: center; }
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity .8s ease var(--delay, 0ms), transform .8s cubic-bezier(.2,.65,.3,1) var(--delay, 0ms); }
+.reveal.reveal-left { transform: translateX(-35px); }
+.reveal.is-visible { opacity: 1; transform: translate(0); }
+
+/* Wysoki kontrast klawiatury dla elementów interaktywnych. */
+:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
+
+/* ========================================================================== */
+/*  7. Układ mobilny — menu rozwija się pod belką, karty ustawiają się pionowo */
+/* ========================================================================== */
+@media (max-width: 790px) {
+  .site-header { grid-template-columns: 1fr auto 1fr; min-height: 71px; padding: 8px 18px; }
+  .brand-mark { width: 48px; height: 48px; }
+  .brand-title span { font-size: 1rem; letter-spacing: .08em; }
+  .brand-title small { font-size: .46rem; letter-spacing: .24em; }
+  .menu-toggle { justify-self: end; display: grid; gap: 4px; width: 35px; padding: 8px 0 8px 9px; border: 0; background: transparent; cursor: pointer; }
+  .menu-toggle span { display: block; width: 25px; height: 1px; margin-left: auto; background: var(--white); transition: transform .25s ease, opacity .25s ease; }
+  .menu-toggle.is-open span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
+  .menu-toggle.is-open span:nth-child(2) { opacity: 0; }
+  .menu-toggle.is-open span:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
+  .main-nav { position: absolute; top: 100%; left: 0; display: grid; width: 100%; padding: 12px 18px 18px; border-bottom: 1px solid var(--line); background: rgba(9,10,10,.98); opacity: 0; pointer-events: none; transform: translateY(-8px); transition: .25s ease; }
+  .main-nav.is-open { opacity: 1; pointer-events: auto; transform: translateY(0); }
+  .main-nav .button { width: 100%; }
+  .nav-dropdown-panel { position: static; width: 100%; margin-top: 4px; box-shadow: none; transform: none; }
+  .nav-dropdown-panel.is-open { transform: none; }
+  .nav-dropdown-toggle { width: 100%; justify-content: space-between; padding: 10px 0; }
+  .hero { min-height: 720px; padding: 130px 24px 100px; }
+  .hero::before { background: linear-gradient(110deg, rgba(9,10,10,.96), rgba(9,10,10,.68)); }
+  .hero-backdrop { background-position: 50% 52%; background-size: min(105vw, 540px); opacity: .18; }
+  .scroll-cue { left: 24px; }
+  .about, .contact, .location-card { grid-template-columns: 1fr; }
+  .about { gap: 62px; }
+  .about-photo { width: calc(100% - 20px); }
+  .section-intro { display: block; margin-bottom: 42px; }
+  .section-intro h2 { margin-bottom: 25px; }
+  .service-grid { grid-template-columns: 1fr; }
+  .service-card, .service-card:first-child { min-height: auto; padding: 30px 24px 36px; }
+  .service-card h3 { margin-top: 34px; }
+  .service-card ul { margin-top: 20px; }
+  .contact { gap: 52px; }
+  .contact-item { grid-template-columns: 105px 1fr; font-size: .76rem; }
+  .map-section { min-height: unset; }
+  .map-caption { padding: 65px 24px 50px; }
+  .map-frame { min-height: 390px; }
+  .site-footer { padding: 20px 24px; }
+}
+
+/* Użytkownikom ograniczającym animacje pokazujemy całą treść natychmiast. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .reveal, .reveal.reveal-left { opacity: 1; transform: none; }
+}
