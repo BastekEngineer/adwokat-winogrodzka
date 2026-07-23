@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <!-- Podstawowe ustawienia dokumentu i poprawne skalowanie na telefonach. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kancelaria Adwokacka Adwokat Julia Winogrodzka – prawo cywilne, karne i rodzinne w Dęblinie.">
+  <title>Kancelaria Adwokacka | Julia Winogrodzka</title>
+
+  <!-- Ikona widoczna na karcie przeglądarki. -->
+  <link rel="icon" type="image/png" href="photos/3_favicon.png">
+
+  <!-- Eleganckie kroje: Cormorant do nagłówków oraz Manrope do treści. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Główny arkusz stylów strony. -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Stała belka nawigacyjna: zawiera logo, nazwę kancelarii i menu. -->
+  <header class="site-header" id="top">
+    <a class="brand-mark" href="#start" aria-label="Przejdź na początek strony">
+      <img src="photos/1_logo.png" alt="Logo kancelarii Julii Winogrodzkiej">
+    </a>
+
+    <a class="brand-title" href="#start" aria-label="Kancelaria Adwokacka Julia Winogrodzka">
+      <span>Julia Winogrodzka</span>
+      <small>adwokat</small>
+    </a>
+
+    <!-- Przycisk jest widoczny tylko na telefonach i otwiera menu. -->
+    <button class="menu-toggle" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="main-menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="main-menu" aria-label="Główna nawigacja">
+      <!-- Rozwijane menu porządkuje przejścia do wszystkich sekcji. -->
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle" type="button" aria-expanded="false">Menu <span aria-hidden="true">+</span></button>
+        <div class="nav-dropdown-panel">
+          <a href="#o-mnie">O mnie</a>
+          <a href="#specjalizacje">Specjalizacje</a>
+          <a href="#kontakt">Kontakt</a>
+          <a href="#dojazd">Jak dojechać</a>
+        </div>
+      </div>
+      <a class="button button-small" href="mailto:adwokat.winogordzka@gmail.com?subject=Zapytanie%20do%20Kancelarii">Napisz wiadomość</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Minimalistyczne otwarcie strony z najważniejszym wezwaniem do kontaktu. -->
+    <section class="hero" id="start" aria-labelledby="hero-title">
+      <div class="hero-backdrop" aria-hidden="true"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">Kancelaria adwokacka · Dęblin</p>
+        <h1 id="hero-title">Spokój i pewność<br><em>w ważnych sprawach.</em></h1>
+        <p class="hero-copy">Rzetelna pomoc prawna oparta na indywidualnym podejściu, dyskrecji oraz jasnej komunikacji.</p>
+        <div class="hero-actions">
+          <a class="button" href="#kontakt">Umów konsultację <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="tel:+48572917801">+48 572 917 801</a>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#o-mnie" aria-label="Przejdź do sekcji o mnie"><span></span> Przewiń</a>
+    </section>
+
+    <!-- Sekcja przedstawiająca adwokatkę. Zdjęcie jest ładowane z folderu photos. -->
+    <section class="section about" id="o-mnie" aria-labelledby="about-title">
+      <div class="about-photo reveal reveal-left">
+        <img src="photos/2_adwokat.jpg" alt="Adwokat Julia Winogrodzka przy pracy">
+      </div>
+      <div class="about-content reveal">
+        <p class="eyebrow">O mnie</p>
+        <h2 id="about-title">Prawo wymaga uważności.<br><em>Relacja — zaufania.</em></h2>
+        <p>Każda sprawa niesie ze sobą inną historię i konkretne potrzeby. W kancelarii stawiam na rzeczową analizę, zrozumiałe wyjaśnienie możliwych rozwiązań oraz pełne zaangażowanie na każdym etapie postępowania.</p>
+        <p>Zapewniam wsparcie osobom prywatnym w sprawach wymagających wiedzy, spokoju i skutecznej reprezentacji.</p>
+        <a class="text-link text-link-arrow" href="#kontakt">Porozmawiajmy o Twojej sprawie <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <!-- Trzy karty prezentują główne obszary praktyki kancelarii. -->
+    <section class="section services" id="specjalizacje" aria-labelledby="services-title">
+      <div class="section-intro reveal">
+        <p class="eyebrow">Zakres pomocy</p>
+        <h2 id="services-title">Obszary praktyki</h2>
+        <p>Pomoc dopasowana do charakteru sprawy — od pierwszej konsultacji po reprezentację przed sądem.</p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card reveal" style="--delay: 0ms;">
+          <span class="service-number">01</span>
+          <h3>Prawo<br><em>cywilne</em></h3>
+          <ul>
+            <li>spadki i dział spadku</li>
+            <li>zapłata i odszkodowania</li>
+            <li>zasiedzenie oraz służebności</li>
+            <li>ochrona dóbr osobistych</li>
+            <li>zniesienie współwłasności</li>
+          </ul>
+        </article>
+        <article class="service-card reveal" style="--delay: 120ms;">
+          <span class="service-number">02</span>
+          <h3>Prawo<br><em>karne</em></h3>
+          <ul>
+            <li>postępowanie przygotowawcze</li>
+            <li>postępowanie sądowe</li>
+            <li>postępowanie wykonawcze</li>
+            <li>obrona oskarżonego</li>
+            <li>pomoc pokrzywdzonym</li>
+          </ul>
+        </article>
+        <article class="service-card reveal" style="--delay: 240ms;">
+          <span class="service-number">03</span>
+          <h3>Prawo<br><em>rodzinne</em></h3>
+          <ul>
+            <li>rozwód i alimenty</li>
+            <li>władza rodzicielska</li>
+            <li>kontakty z dziećmi</li>
+            <li>podział majątku</li>
+            <li>sprawy opiekuńcze</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Kontakt: dane, skróty do kanałów zewnętrznych i główny przycisk e-mail. -->
+    <section class="section contact" id="kontakt" aria-labelledby="contact-title">
+      <div class="contact-heading reveal">
+        <p class="eyebrow">Kontakt</p>
+        <h2 id="contact-title">Porozmawiajmy<br><em>o Twojej sprawie.</em></h2>
+        <p>Skontaktuj się telefonicznie, e-mailowo lub odwiedź kancelarię w centrum Dęblina.</p>
+        <a class="button" href="mailto:adwokat.winogordzka@gmail.com?subject=Zapytanie%20do%20Kancelarii">Napisz wiadomość <span aria-hidden="true">↗</span></a>
+        <div class="social-links" aria-label="Profile kancelarii">
+          <a href="https://share.google/v4QbQTAJqQ4lbe7Ya" target="_blank" rel="noopener noreferrer" aria-label="Wizytówka Google kancelarii"><strong>G</strong><span>Google</span></a>
+          <a href="https://www.instagram.com/adwokat.winogrodzka" target="_blank" rel="noopener noreferrer" aria-label="Instagram kancelarii"><strong>◎</strong><span>Instagram</span></a>
+        </div>
+      </div>
+
+      <address class="contact-details reveal" style="--delay: 140ms;">
+        <div class="contact-item contact-name"><span>Kancelaria</span><strong>Kancelaria Adwokacka<br>Adwokat Julia Winogrodzka</strong></div>
+        <div class="contact-item"><span>Godziny przyjęć</span><strong>pon. – pt. · 9:00 – 17:00</strong></div>
+        <div class="contact-item"><span aria-hidden="true">⌖</span><a href="https://maps.google.com/?q=Rynek+30+lok.+9,+08-530+Dęblin" target="_blank" rel="noopener noreferrer">Rynek 30 / lok. 9<br>08-530 Dęblin</a></div>
+        <div class="contact-item"><span aria-hidden="true">◔</span><a href="tel:+48572917801">572 917 801</a></div>
+        <div class="contact-item"><span aria-hidden="true">✉</span><a href="mailto:adwokat.winogordzka@gmail.com">adwokat.winogordzka@gmail.com</a></div>
+        <div class="contact-item"><span>NIP</span><strong>506 012 94 21</strong></div>
+        <!-- Wstaw właściwy numer rachunku przed opublikowaniem strony. -->
+        <div class="contact-item bank-account"><span>Rachunek bankowy</span><strong>PL XX XXXX XXXX XXXX XXXX XXXX XXXX</strong></div>
+      </address>
+    </section>
+
+    <!-- Mapa Google w iframe działa bez konfiguracji klucza API. -->
+    <section class="map-section" id="dojazd" aria-labelledby="map-title">
+      <div class="map-caption reveal">
+        <p class="eyebrow">Jak dojechać</p>
+        <h2 id="map-title">Znajdź nas<br><em>w Dęblinie.</em></h2>
+        <p>Rynek 30 / lok. 9<br>08-530 Dęblin</p>
+      </div>
+      <iframe class="map-frame" title="Mapa dojazdu do Kancelarii Adwokackiej Julii Winogrodzkiej" src="https://www.google.com/maps?q=Rynek%2030%20lok.%209%2C%2008-530%20D%C4%99blin&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+  </main>
+
+  <!-- Dolna belka z prawami autorskimi i skrótem do początku strony. -->
+  <footer class="site-footer">
+    <p>© 2026 Kancelaria Adwokacka Adwokat Winogrodzka. Wszelkie prawa zastrzeżone.</p>
+    <a href="#top">Na górę <span aria-hidden="true">↑</span></a>
+  </footer>
+
+  <!-- Skrypty obsługują menu, animacje przewijania oraz aktywny nagłówek. -->
+  <script src="script.js"></script>
+</body>
+</html>
