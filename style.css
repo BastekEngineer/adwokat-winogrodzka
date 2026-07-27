@@ -188,8 +188,8 @@ p { margin: 0; }
     font-size:1rem;
 }
 .pricing-note{
-    padding:35px 24px;
-    margin-top:45px;
+    padding:28px 20px;
+    margin-top:30px;
 }
 .pricing-note p{
     margin-bottom:28px;
@@ -272,8 +272,8 @@ p { margin: 0; }
 .pricing-note{
 
     max-width:850px;
-    margin:70px auto 0;
-    padding:55px;
+    margin:45px auto 0;
+    padding:40px;
     border:1px solid var(--line);
     background:
 
