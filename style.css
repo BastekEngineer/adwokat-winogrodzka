@@ -153,7 +153,7 @@ p { margin: 0; }
   /* Po kliknięciu hamburgera linki są widoczne od razu — bez drugiego etapu „Menu”. */
   .nav-dropdown-toggle { display: none; }
   .nav-dropdown-panel, .nav-dropdown-panel.is-open { position: static; display: grid; width: 100%; margin-top: 0; box-shadow: none; opacity: 1; pointer-events: auto; transform: none; }
-  .hero { min-height: 720px; padding: 130px 24px 100px; }
+  .hero { min-height: 720px; padding: 105px 24px 100px; }
   .hero::before { background: linear-gradient(110deg, rgba(9,10,10,.96), rgba(9,10,10,.68)); }
   /* Na telefonie znak pozostaje proporcjonalny, ale jest wyraźniejszy i mniejszy niż wcześniej. */
   .hero-backdrop { background-position: 50% 54%; background-size: min(86vw, 430px); opacity: .29; }
