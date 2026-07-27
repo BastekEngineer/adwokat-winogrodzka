@@ -158,6 +158,75 @@ p { margin: 0; }
 /* Wysoki kontrast klawiatury dla elementów interaktywnych. */
 :focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
 
+/* ==========================================================
+   CENNIK
+========================================================== */
+
+.pricing{
+    background:
+        radial-gradient(
+            ellipse at 15% 20%,
+            rgba(140,150,140,.08),
+            transparent 45%
+        ),
+        #0d0f0e;
+}
+
+.pricing-list{
+    max-width:1100px;
+    margin:55px auto 0;
+    border-top:1px solid var(--line);
+}
+
+.price-row{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+    padding:20px 12px;
+    border-bottom:1px solid var(--line);
+    transition:
+        opacity .8s ease var(--delay,0ms),
+        transform .8s cubic-bezier(.2,.65,.3,1) var(--delay,0ms),
+        background .35s ease,
+        padding .35s ease,
+        border-color .35s ease;
+
+}
+
+.price-row:hover{
+
+    background:rgba(255,255,255,.035);
+    border-color:rgba(255,255,255,.45);
+    padding-left:22px;
+    padding-right:22px;
+
+}
+
+.price-row span{
+
+    color:var(--muted);
+    font-size:.95rem;
+
+}
+
+.price-row strong{
+
+    font-size:1rem;
+    font-weight:700;
+    color:var(--white);
+    letter-spacing:.04em;
+    transition:transform .3s ease;
+
+}
+
+.price-row:hover strong{
+    transform:translateX(6px);
+
+}
+
+
 /* ========================================================================== */
 /*  7. Układ mobilny — menu rozwija się pod belką, karty ustawiają się pionowo */
 /* ========================================================================== */
@@ -229,71 +298,6 @@ p { margin: 0; }
   .reveal, .reveal.reveal-left { opacity: 1; transform: none; }
 }
 
-/* ==========================================================
-   CENNIK
-========================================================== */
-
-.pricing{
-    background:
-        radial-gradient(
-            ellipse at 15% 20%,
-            rgba(140,150,140,.08),
-            transparent 45%
-        ),
-        #0d0f0e;
-}
-
-.pricing-list{
-    max-width:1100px;
-    margin:55px auto 0;
-    border-top:1px solid var(--line);
-}
-
-.price-row{
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:30px;
-    padding:20px 12px;
-    border-bottom:1px solid var(--line);
-    transition:
-        background .35s ease,
-        padding .35s ease,
-        border-color .35s ease;
-
-}
-
-.price-row:hover{
-
-    background:rgba(255,255,255,.035);
-    border-color:rgba(255,255,255,.45);
-    padding-left:22px;
-    padding-right:22px;
-
-}
-
-.price-row span{
-
-    color:var(--muted);
-    font-size:.95rem;
-
-}
-
-.price-row strong{
-
-    font-size:1rem;
-    font-weight:700;
-    color:var(--white);
-    letter-spacing:.04em;
-    transition:transform .3s ease;
-
-}
-
-.price-row:hover strong{
-    transform:translateX(6px);
-
-}
 
 /* ===========================
    Zmiana języka
