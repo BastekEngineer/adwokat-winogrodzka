@@ -218,12 +218,9 @@ p { margin: 0; }
 }
 
 .pricing-list{
-
     max-width:1100px;
     margin:55px auto 0;
-
     border-top:1px solid var(--line);
-
 }
 
 .price-row{
@@ -231,13 +228,9 @@ p { margin: 0; }
     display:flex;
     justify-content:space-between;
     align-items:center;
-
     gap:30px;
-
     padding:28px 12px;
-
     border-bottom:1px solid var(--line);
-
     transition:
         background .35s ease,
         padding .35s ease,
@@ -248,9 +241,7 @@ p { margin: 0; }
 .price-row:hover{
 
     background:rgba(255,255,255,.035);
-
     border-color:rgba(255,255,255,.45);
-
     padding-left:22px;
     padding-right:22px;
 
@@ -259,7 +250,6 @@ p { margin: 0; }
 .price-row span{
 
     color:var(--muted);
-
     font-size:.95rem;
 
 }
@@ -267,19 +257,14 @@ p { margin: 0; }
 .price-row strong{
 
     font-size:1rem;
-
     font-weight:700;
-
     color:var(--white);
-
     letter-spacing:.04em;
-
     transition:transform .3s ease;
 
 }
 
 .price-row:hover strong{
-
     transform:translateX(6px);
 
 }
@@ -287,13 +272,9 @@ p { margin: 0; }
 .pricing-note{
 
     max-width:850px;
-
     margin:70px auto 0;
-
     padding:55px;
-
     border:1px solid var(--line);
-
     background:
 
         linear-gradient(
@@ -303,7 +284,6 @@ p { margin: 0; }
         );
 
     text-align:center;
-
     transition:
         transform .35s ease,
         border-color .35s ease,
@@ -314,9 +294,7 @@ p { margin: 0; }
 .pricing-note:hover{
 
     transform:translateY(-6px);
-
     border-color:rgba(255,255,255,.55);
-
     box-shadow:
         0 20px 45px rgba(0,0,0,.35);
 
@@ -325,7 +303,6 @@ p { margin: 0; }
 .pricing-note h3{
 
     margin-bottom:22px;
-
     font-size:clamp(2rem,3vw,3rem);
 
 }
@@ -333,9 +310,7 @@ p { margin: 0; }
 .pricing-note p{
 
     max-width:620px;
-
     margin:0 auto 35px;
-
     color:var(--muted);
 
 }
@@ -343,5 +318,44 @@ p { margin: 0; }
 .pricing-note .button{
 
     margin:auto;
+
+}
+
+/* ===========================
+   Zmiana języka
+=========================== */
+
+.menu-divider{
+
+    margin:10px 8px;
+    border-top:1px solid var(--line);
+
+}
+
+.language-switch{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 12px;
+    color:var(--muted);
+    font-size:.78rem;
+    transition:
+        color .25s ease,
+        background .25s ease;
+
+}
+
+.language-switch:hover{
+
+    color:var(--white);
+    background:rgba(255,255,255,.05);
+
+}
+
+.language-switch.active{
+
+    color:var(--white);
+    font-weight:700;
 
 }
