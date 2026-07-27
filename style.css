@@ -135,7 +135,10 @@ p { margin: 0; }
     .map-caption{
         padding:55px;
     }
-
+  .map-caption h2{
+    font-size: clamp(2rem, 2.6vw, 3rem);
+    line-height: 1;
+}
 }
 
 .location-card { display: grid; grid-template-columns: minmax(280px, .78fr) 1.22fr; min-height: 510px; }
