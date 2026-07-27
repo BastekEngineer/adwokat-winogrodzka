@@ -197,9 +197,11 @@ p { margin: 0; }
   .map-caption { padding: 65px 24px 50px; }
   .map-frame { min-height: 390px; }
   .site-footer { padding: 20px 24px; }
-/* Cennikowo */
+
+  
+  /* Cennikowo */
   .pricing-list{ margin-top:35px;}
-.price-row{
+  .price-row{
         display:flex;
         flex-direction:column;
         align-items:flex-start;
@@ -210,12 +212,13 @@ p { margin: 0; }
 
     .price-row span{
         margin:0;
-        line-height:1.2;
+        line-height:1.1;
     }
 
     .price-row strong{
-        margin-top:2px;
-        line-height:1.1;
+        margin:0;
+       line-height:1;
+       font-size:.95rem;
     }
 }
 
