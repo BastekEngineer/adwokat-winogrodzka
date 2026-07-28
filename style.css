@@ -61,7 +61,16 @@ p { margin: 0; }
 /*  3. Sekcja otwierająca                                                     */
 /* ========================================================================== */
 .hero { position: relative; display: flex; align-items: center; min-height: min(880px, 100vh); padding: 130px clamp(1.25rem, 12vw, 12.5rem) 105px; isolation: isolate; overflow: hidden; }
-.hero::before { position: absolute; z-index: -1; top: 0; left: 0; width: 100%; height: 100%; content: ""; background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(112, 119, 109, .17), transparent 70%), linear-gradient(110deg, #090a0a 16%, rgba(9,10,10,.89) 55%, rgba(9,10,10,.25)); }
+.hero::before {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(9,10,10,.94) 0%,
+            rgba(9,10,10,.60) 40%,
+            rgba(9,10,10,.15) 70%,
+            rgba(9,10,10,0) 100%
+        );
+}
 /* Znak Adwokatury Polskiej jest tłem pierwszego ekranu i zachowuje proporcje na małych ekranach. */
 .hero-backdrop {
     position: absolute;
