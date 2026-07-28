@@ -79,7 +79,7 @@ p { margin: 0; }
 
     background: url("photos/4_tło.png") 90% 50% / 950px no-repeat;
 
-    opacity: .48;
+    opacity: .42;
 
     filter: grayscale(1) invert(1) contrast(1.1);
 
@@ -283,7 +283,7 @@ p { margin: 0; }
   .hero-backdrop{
         background: url("photos/4_tło.png") 78% 52% / 130vw no-repeat;
 
-        opacity: .48;
+        opacity: .42;
 
         filter: grayscale(1) invert(1) contrast(1.1);
 
