@@ -367,3 +367,41 @@ p { margin: 0; }
     font-weight:700;
 
 }
+
+/* ==========================================================
+   POLITYKA PRYWATNOŚCI
+========================================================== */
+
+.policy-page{
+    padding:140px clamp(1.25rem,8vw,9rem) 80px;
+    max-width:1000px;
+    margin:0 auto;
+}
+
+.policy-page h1{
+    margin-bottom:20px;
+}
+
+.policy-page h2{
+    margin-top:60px;
+    margin-bottom:18px;
+    font-size:clamp(2rem,3vw,3rem);
+}
+
+.policy-page p,
+.policy-page li{
+    color:var(--muted);
+    line-height:1.85;
+}
+
+.policy-page ul{
+    padding-left:22px;
+}
+
+.back-button{
+    margin-bottom:55px;
+}
+
+.policy-page section{
+    margin-bottom:45px;
+}
