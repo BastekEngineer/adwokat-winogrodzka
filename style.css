@@ -406,6 +406,7 @@ p { margin: 0; }
     margin-bottom:45px;
 }
 
+
 /* Link "Polityka prywatności" w stopce */
 .footer-privacy-link{
     text-decoration: underline;
@@ -413,7 +414,6 @@ p { margin: 0; }
     text-underline-offset: 3px;
     transition: color .25s ease;
 }
-
 .footer-privacy-link:hover{
     color: var(--white);
 }
