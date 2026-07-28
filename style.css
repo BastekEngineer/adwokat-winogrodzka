@@ -76,7 +76,7 @@ p { margin: 0; }
     position: absolute;
     z-index: -2;
     inset: 0;
-    background: url("photos/4_tło.png") calc(100% + 60px) center / 750px no-repeat;
+    background: url("photos/4_tło.png") calc(100% + 30px) center / 750px no-repeat;
     opacity: .36;
     filter: grayscale(1) invert(1) contrast(1.1);
     transform: scale(1.04);
