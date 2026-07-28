@@ -76,16 +76,9 @@ p { margin: 0; }
     position: absolute;
     z-index: -2;
     inset: 0;
-
-    background: url("photos/4_tło.png") 90% 50% / 900px no-repeat;
-
+    background: url("photos/4_tło.png") 90% 50% / 850px no-repeat;
     opacity: .40;
-
     filter: grayscale(1) invert(1) contrast(1.1);
-
-    -webkit-mask-image: radial-gradient(circle at 70% 50%, black 58%, transparent 100%);
-    mask-image: radial-gradient(circle at 70% 50%, black 58%, transparent 100%);
-
     transform: scale(1.04);
     animation: breathing-bg 12s ease-in-out infinite alternate;
 }
@@ -282,13 +275,8 @@ p { margin: 0; }
   /* Na telefonie znak pozostaje proporcjonalny, ale jest wyraźniejszy i mniejszy niż wcześniej. */
   .hero-backdrop{
         background: url("photos/4_tło.png") 78% 52% / 130vw no-repeat;
-
         opacity: .40;
-
         filter: grayscale(1) invert(1) contrast(1.1);
-
-        -webkit-mask-image: radial-gradient(circle at 75% 50%, black 60%, transparent 100%);
-        mask-image: radial-gradient(circle at 75% 50%, black 60%, transparent 100%);
     }
 
   .scroll-cue { left: 24px; }
