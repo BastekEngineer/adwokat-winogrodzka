@@ -77,9 +77,9 @@ p { margin: 0; }
     z-index: -2;
     inset: 0;
 
-    background: url("photos/4_tło.png") 90% 50% / 850px no-repeat;
+    background: url("photos/4_tło.png") 90% 50% / 950px no-repeat;
 
-    opacity: .38;
+    opacity: .48;
 
     filter: grayscale(1) invert(1) contrast(1.1);
 
@@ -281,9 +281,9 @@ p { margin: 0; }
   
   /* Na telefonie znak pozostaje proporcjonalny, ale jest wyraźniejszy i mniejszy niż wcześniej. */
   .hero-backdrop{
-        background: url("photos/4_tło.png") 78% 52% / 115vw no-repeat;
+        background: url("photos/4_tło.png") 78% 52% / 130vw no-repeat;
 
-        opacity: .40;
+        opacity: .48;
 
         filter: grayscale(1) invert(1) contrast(1.1);
 
