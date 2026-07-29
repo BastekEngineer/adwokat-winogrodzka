@@ -132,7 +132,7 @@ p { margin: 0; }
 .contact-item :is(strong, a) { color: #e4e6df; font-family: var(--sans); font-size: .83rem; font-weight: 500; line-height: 1.55; }
 .contact-item a { transition: color .2s; }
 .contact-item a:hover { color: var(--muted); }
-.contact-name {display: block;text-align: center;padding: 26px 0;}
+.contact-name {display: block;text-align: center;padding: 22px 0;}
 .contact-name strong { font-family: var(--serif); font-size: 1.2rem; line-height: 1.15; }
 .bank-account strong { font-family: monospace; font-size: .78rem; letter-spacing: .04em; }
 .map-section { background: #0c0d0d; }
