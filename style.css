@@ -83,7 +83,7 @@ p { margin: 0; }
     animation: breathing-bg 12s ease-in-out infinite alternate;
 }
 .hero-content { max-width: 790px; }
-.eyebrow { margin-bottom: 19px; color: var(--muted); font-size: 0.75rem; font-weight: 700; letter-spacing: .21em; text-transform: uppercase; }
+.eyebrow { margin-bottom: 19px; color: var(--muted); font-size: 0.65rem; font-weight: 700; letter-spacing: .21em; text-transform: uppercase; }
 .hero-copy { max-width: 530px; margin-top: 29px; color: #d2d4cf; font-size: clamp(.93rem, 1.2vw, 1.05rem); }
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 25px; margin-top: 35px; }
 .scroll-cue { position: absolute; bottom: 33px; left: clamp(1.25rem, 4vw, 4.7rem); display: flex; gap: 10px; align-items: center; color: var(--muted); font-size: .6rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
