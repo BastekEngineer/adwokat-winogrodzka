@@ -381,8 +381,8 @@ margin-top:45px;
 /* Polityka prywatności na smartfony */
  
   .policy-page{padding:120px 24px 70px;}
-  .policy-section{grid-template-columns:32px 1fr; gap:15px; align-items:start;}
-  .policy-number{font-size:1.6rem;}
+  .policy-section{grid-template-columns:38px 1fr; gap:15px; align-items:start;}
+  .policy-number{font-size:1.8rem;}
   .policy-section h2{font-size:1.6rem;}
   .policy-lead{font-size:1rem;}
   .back-button{width:100%; justify-content:center;}
