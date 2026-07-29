@@ -40,7 +40,7 @@ p { margin: 0; }
 .brand-title small { margin-top: 4px; color: var(--muted); font-size: .70rem; font-weight: 700; letter-spacing: .32em; }
 .main-nav { justify-self: end; display: flex; align-items: center; gap: 15px; }
 .nav-dropdown { position: relative; }
-.nav-dropdown-toggle { display: inline-flex; gap: 9px; align-items: center; padding: 8px; border: 0; background: transparent; cursor: pointer; color: var(--white); font-size: .82rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.nav-dropdown-toggle { display: inline-flex; gap: 9px; align-items: center; padding: 8px; border: 0; background: transparent; cursor: pointer; color: var(--white); font-size: .86rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
 .nav-dropdown-toggle span { transition: transform .25s ease; }
 .nav-dropdown-toggle[aria-expanded="true"] span { transform: rotate(45deg); }
 .nav-dropdown-panel { position: absolute; right: 0; top: calc(100% + 10px); display: grid; width: 194px; padding: 8px; border: 1px solid var(--line); background: rgba(19, 21, 20, .98); box-shadow: 0 20px 40px rgba(0, 0, 0, .32); opacity: 0; pointer-events: none; transform: translateY(-7px); transition: .25s ease; }
@@ -52,7 +52,7 @@ p { margin: 0; }
 /* Wspólny styl przycisków i tekstowych odsyłaczy. */
 .button { display: inline-flex; gap: 20px; align-items: center; justify-content: center; padding: 14px 21px; border: 1px solid rgba(255,255,255,.52); background: linear-gradient(135deg, rgba(255,255,255,.16), rgba(255,255,255,.04)); color: var(--white); font-size: .68rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; transition: transform .25s ease, background .25s ease, border-color .25s ease; }
 .button:hover, .button:focus-visible { transform: translateY(-3px); border-color: var(--white); background: rgba(255,255,255,.16); }
-.button-small { padding: 10px 13px; font-size: .62rem; white-space: nowrap; }
+.button-small { padding: 11px 14px; font-size: .66rem; white-space: nowrap; }
 .text-link { display: inline-block; border-bottom: 1px solid currentColor; color: var(--white); font-size: .75rem; font-weight: 700; letter-spacing: .08em; padding-bottom: 3px; transition: color .2s ease; }
 .text-link:hover { color: #c9ccc7; }
 .text-link-arrow { margin-top: 18px; }
