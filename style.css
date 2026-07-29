@@ -23,7 +23,7 @@ button { color: inherit; font: inherit; }
 h1, h2, h3 { margin: 0; font-family: var(--serif); font-weight: 500; line-height: .94; letter-spacing: -.025em; }
 h1, h2, h3, .brand-title span { background: var(--white-gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
 h1 { font-size: clamp(3.7rem, 8.2vw, 8rem); }
-h2 { font-size: clamp(3.2rem, 5.9vw, 5.7rem); }
+h2 { font-size: clamp(3.2rem, 5vw, 5.7rem); }
 h3 { font-size: clamp(2.7rem, 4vw, 4.4rem); }
 h1 em, h2 em, h3 em { font-weight: 400; }
 p { margin: 0; }
