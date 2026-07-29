@@ -379,30 +379,21 @@ margin-top:45px;
   .site-footer { padding: 20px 24px; }
   
 /* Polityka prywatności na smartfony */
- 
-@media (max-width: 790px){
 
-    .policy-section{
-        display: grid;
-        grid-template-columns: 50px 1fr;
-        column-gap: 16px;
-        align-items: start;
-        padding: 32px 0;
+ .policy-section{
+        grid-template-columns:42px 1fr;
+        column-gap:14px;
+        align-items:flex-start;
     }
 
     .policy-number{
-        font-size: 1.7rem;
-        line-height: 1;
-        margin-top: 4px;
-        text-align: left;
+        margin-top:8px;
+        line-height:1;
     }
 
     .policy-section h2{
-        margin: 0;
-        font-size: 1.55rem;
-        line-height: 1.2;
+        margin:0;
     }
-}
   
   /* Cennikowo */
   .pricing-list{ margin-top:35px;}
