@@ -299,7 +299,7 @@ p { margin: 0; }
 /* Polityka prywatności na smartfony */
  
   .policy-page{padding:120px 24px 70px;}
-  .policy-section{grid-template-columns:1fr; gap:8px; padding:35px 0;}
+  .policy-section{grid-template-columns:1fr; gap:6px; padding:30px 0;}
   .policy-number{font-size:1.6rem;}
   .policy-section h2{font-size:1.6rem;}
   .policy-lead{font-size:1rem;}
