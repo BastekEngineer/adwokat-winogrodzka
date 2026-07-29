@@ -373,7 +373,7 @@ margin-top:45px;
   .service-card h3 { margin-top: 34px; }
   .service-card ul { margin-top: 20px; }
   .contact { gap: 52px; }
-  .contact-item { grid-template-columns: 85px 1fr; font-size: .76rem; }
+  .contact-item { grid-template-columns: 75px 1fr; font-size: .76rem; }
   .map-section { min-height: unset; }
   .map-caption { padding: 65px 24px 50px; }
   .map-frame { min-height: 390px; }
